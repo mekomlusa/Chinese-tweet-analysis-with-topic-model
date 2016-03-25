@@ -9,8 +9,8 @@ library(lda)
 library(LDAvis)
 library(servr)
 
-# Set locale (reset later)
-Sys.setlocale(locale="Chinese")
+# Set locale (reset later). If your locale is already in Chinese, neglect it.
+Sys.setlocale(category="LC_ALL",locale="Chinese")
 
 ##  Run the cutter engine with stopword
 seg = worker(stop_word = "./stopword.txt")
@@ -78,5 +78,8 @@ serVis(json, out.dir = './vis', open.browser = FALSE)
 # change the encoding of the json file
 writeLines(iconv(readLines("./vis/lda.json"), from = "GBK", to = "UTF8"), 
            file("./vis/lda.json", encoding="UTF-8"))
+
+# Reset locale
+Sys.setlocale(category="LC_ALL",locale="English")
 
 
