@@ -16,10 +16,11 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 # Change working directory, if necessary
-dir = "D:\Sth\\twitter\mlusa"
+dir = "YOUR WORKING DIRECTORY HERE"
 os.chdir(dir)
 
 # Read the csv file that contains all tweets
+# If downloaded from Twitter server, the file should have the name "tweet.csv"
 text = pd.read_csv("tweets.csv")
 
 # Convert the data frame to an appropriate type!
@@ -28,7 +29,7 @@ text['text'] = text['text'].apply(str)
 # Extract the tweet texts
 df = DataFrame(text.text)
 
-# Drop special characters (keep only English and Chinese characters)
+# Drop special characters (keep only English and Chinese words)
 # Adapted from http://stackoverflow.com/questions/2718196/find-all-chinese-text-in-a-string-using-python-and-regex
 l = []
 for i in range(len(df)):
@@ -36,5 +37,5 @@ for i in range(len(df)):
         l.append(n)
         print n
 
-# Output
+# Output the pre-processed tweets. Change the name of csv as you like.
 np.savetxt("tweets_2.csv", l, delimiter=",", fmt='%s')
