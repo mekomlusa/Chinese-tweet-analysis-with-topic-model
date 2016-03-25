@@ -43,7 +43,7 @@ Thus, it is recommended to run the files in the following order:
 8. Enjoy!
 
 ## Questions?
-Comment below or mention [@mlusa](https://twitter.com/mlusa) on Twitter.
+Report issues or mention [@mlusa](https://twitter.com/mlusa) on Twitter.
 
 I shall update the readme once I found out more information about Topic Model.
 
