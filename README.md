@@ -1,4 +1,4 @@
-# Tweet-analysis-with-topic-model
+# Chinese-tweet-analysis-with-topic-model
 
 An experiment of applying topic model to a tweet archive, downloaded from the Twitter server (Settings -> Account -> Request Twitter Archive). The code is originally adapted from [Tan He](http://computational-communication.com/2015/12/ldavis/), where he demostrated how to analyze and visualize **Chinese text** using topic model. For more information about topic model, refer to links below (or google "Topic Models". I'm pretty sure there are plenty of awesome texts out there!):
 
