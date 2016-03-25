@@ -73,10 +73,10 @@ json <- createJSON(phi = phi, theta = theta,
                    doc.length = doc.length, vocab = vocab,
                    term.frequency = term.frequency)
 # Write out the json file to a local directory using the serVis function from LDAvis
-serVis(json, out.dir = './vis_stopword', open.browser = FALSE)
+serVis(json, out.dir = './vis', open.browser = FALSE)
 
 # change the encoding of the json file
-writeLines(iconv(readLines("./vis_stopword/lda.json"), from = "GBK", to = "UTF8"), 
+writeLines(iconv(readLines("./vis/lda.json"), from = "GBK", to = "UTF8"), 
            file("./vis/lda.json", encoding="UTF-8"))
 
 
