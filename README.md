@@ -31,14 +31,15 @@ Thus, it is recommended to run the files in the following order:
 3. Make sure that `tweets.csv`, `LDATweets.R`, `tweetExtract.py`, and (optional) `stopword.txt` are all in your working directory.
 4. Run `tweetExtract.py`.
 5. Run `LDATweets.R`. It may take a while for R to execute the script, depending on the size of your tweet archive.
-6. Open the `vis` folder, found under the root of your working directory. This step is to force Chinese characters to correctly display in your browser.
-  1. Create an empty file with whatever name you like, but the extension must be `.json`.
-  2. Edit that file in Notepad++. Click on "Encoding" -> "Encode in UTF-8".
-  3. Save the file.
-  4. Open `lda.json`. Copy and paste everything in the `.json` file above.
-  5. Save the `.json` file again. 
-  6. Remove the `lda.json` file and renamed the previous `.json` file as `lda.json`.
-7. Upload the whole `vis` folder to a server, or open the `index.html` in Firefox.
+6. Upload the whole `vis` folder to a server, or open the `index.html` in Firefox.
+7. Do this **ONLY IF** Chinese characters are not correctly displaying in your browser:
+  1. Open the `vis` folder, found under the root of your working directory.
+  2. Create an empty file with whatever name you like, but the extension must be `.json`.
+  3. Edit that file in Notepad++. Click on "Encoding" -> "Encode in UTF-8".
+  4. Save the file.
+  5. Open `lda.json`. Copy and paste everything in the `.json` file above.
+  6. Save the `.json` file again. 
+  7. Remove the `lda.json` file and renamed the previous `.json` file as `lda.json`.
 8. Enjoy!
 
 ## Questions?
