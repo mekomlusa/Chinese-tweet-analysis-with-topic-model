@@ -24,9 +24,10 @@ The repository contains three files: `LDATweets.R`, `stopword.txt`, and `tweetEx
 - `tweetExtract.py`: preprocessing tweets before running the topic model.
 
 Thus, it is recommended to run the files in the following order:
+
 1. Request your Twitter Archive from [twitter.com](https://twitter.com).
 2. Unzip your Twitter Archive to the local disk. You should find `tweets.csv` under the root.
-  - Ideally, your tweets should be mostly **Chinese**. If it's in English, refer to [A topic model for movie reviews](http://cpsievert.github.io/LDAvis/reviews/reviews.html) as shwon above.
+  1. Ideally, your tweets should be mostly **Chinese**. If it's in English, refer to [A topic model for movie reviews](http://cpsievert.github.io/LDAvis/reviews/reviews.html) as shwon above.
 3. Make sure that `tweets.csv`, `LDATweets.R`, `tweetExtract.py`, and (optional) `stopword.txt` are all in your working directory.
 4. Run `tweetExtract.py`.
 5. Run `LDATweets.R`. It may take a while for R to execute the script, depending on the size of your tweet archive.
