@@ -61,6 +61,19 @@ set.seed(816816)
 fit <- lda.collapsed.gibbs.sampler(documents = documents, K = K, vocab = vocab, num.iterations = G, 
                                    alpha = alpha, eta = eta, initial = NULL, burnin = 0, 
                                    compute.log.likelihood = TRUE)
+                                   
+# Some interesting features provided by the LDA package
+# Predict new words for the document
+predictions <- predictive.distribution(fit$document_sums, fit$topics,
+                                       0.1, 0.1)
+# Use top.topic.words to show the top 5 predictions in each document.
+top.topic.words(t(predictions), 5)
+
+# wordcloud
+library(wordcloud)
+library(RColorBrewer)
+pal <- brewer.pal(8,"Dark2")
+wordcloud(vocab,term.table,scale=c(4,.5),min.freq=200,max.words=Inf, random.order=FALSE, colors=pal)
 
 # visualization
 theta <- t(apply(fit$document_sums + alpha, 2, function(x) x/sum(x)))  # document term matrix
